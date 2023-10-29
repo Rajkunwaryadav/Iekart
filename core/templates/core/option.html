@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose</title>
+    <link rel="stylesheet" href="{% static "images\css\option.css" %}">
+    <script src="{% static "images\css\option.js" %} "></script>
+</head>
+<body>
+    <!-- <h1>What's on your mind?</h1> -->
+     <!-- Animated Wave Background  -->
+     <div class="ocean">
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+<div class="container">
+  <div class="card">
+     <img src="{% static "images\buy.png" %}" class="buy"><!-- logo dalna h -->
+    <div class="content">
+      <h2>BUY</h2>
+      <p>Discover our site- exclusively for IETians that guarantees you will save money while experiencing easy shopping. </p>
+      <a href="/">Buy Now!</a>
+    </div>
+  </div>
+  
+  <div class="card">
+    <img src="{% static "images\sell.png" %}" class="sell">
+    <div class="content">
+      <h2>SELL</h2>
+      <p>Got something you no longer need? Sell it through our site with best price tags! </p>
+      <a href="{% url 'item:new' %}">Sell Now!</a>
+    </div>
+  </div>
+  
+  <div class="card">
+    <img src="{% static "images\donate.png" %}" class="donate">
+    <div class="content">
+      <h2>DONATE</h2>
+      <p>Not a member of Parmarth but still want to donate? Join us in our journey of spreading smiles and receiving well wishes. </p>
+      <a href="#">Donate Now!</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

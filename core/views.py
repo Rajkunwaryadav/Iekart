@@ -36,3 +36,8 @@ def signup(request):
     return render(request, 'core/signup.html', {
         'form': form
     })
+
+
+
+def choose_view(request):
+    return render(request, 'core/option.html')

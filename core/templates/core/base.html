@@ -8,7 +8,10 @@
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="{% static "images\css\base.css" %}">
         
-
+        <link rel="apple-touch-icon" sizes="180x180" href="{% static "apple-touch-icon.png" %} ">
+        <link rel="icon" type="image/png" sizes="32x32" href="{% static "favicon-32x32.png" %} ">
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static "favicon-16x16.png" %}">
+        <link rel="manifest" href="/site.webmanifest">
         <link rel="stylesheet" href="images\css\detail.css">
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -27,8 +30,9 @@
         style="background-color:#a7e5f8;">
             <!-- <a class="active1" href="#"><i class="fa fa-fw fa-home"></i> Home</a>  -->
             <a href="/"><img src="{% static "images\home.png" %} " title="Home" alt="Home" class="home" style="height: 50px; width: 50px; margin-top: 0px;"></a>
-            <a href="{% url 'item:new' %}"><i class="fa fa-fw fa-search" style="margin-left: -5px;"></i>New Item</a> 
-            <a href="{% url 'item:items' %}"><i class="fa fa-fw fa-envelope"></i> Browse</a> 
+           <!-- <a href="{% url 'item:new' %}"><i class="fa fa-fw fa-search" style="margin-left: -5px;"></i>New Item</a> -->
+            <a href="{% url 'core:option' %}"><i class="fa fa-fw fa-search" style="margin-left: -5px;"></i>Choose</a>
+            <a href="{% url 'item:items' %}"><i class="fa fa-fw fa-envelope"></i> Search</a> 
             {% if request.user.is_authenticated %}
             <a href="{% url 'conversation:inbox' %}"><i class="fa fa-fw fa-user"></i> Inbox</a>
             <a href="{% url 'dashboard:index' %}"><i class="fa fa-fw fa-user"></i> Dashboard</a>
